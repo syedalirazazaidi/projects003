@@ -3,7 +3,7 @@ import data from "./data";
 function App() {
   const [count, setCount] = React.useState<number>(0);
   const [text, setText] = React.useState<string[]>([]);
-  const handleSubmit = (event: any) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     let amount: number = count;
     if (amount <= 0) {
